@@ -1,0 +1,146 @@
+import styled from 'styled-components'
+import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md'
+import {Link} from 'react-router-dom'
+
+
+export const HeroContainer = styled.div`
+    background: #FAFAF2;
+    display: flex;
+    flex-direction: row;
+    //justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    height: 800px;
+    position: relative;
+    z-index: 1;
+    margin-top: -80px;
+
+    /*Add :before styles */
+`
+
+export const HeroBg = styled.div`
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    //left: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+`
+
+export const ImageBg = styled.img`
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    background: #FAFAF2;
+    @media screen and (max-width: 768px){
+        display: none;
+    }
+`
+
+export const HeroContent = styled.div`
+    z-index: 3;
+    max-width: 1200px;
+    position: absolute;
+    padding: 8px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+    @media screen and (max-width: 768px){
+        align-items: center;
+        text-align: center;
+        left: 0px;
+        right: 0px;
+        
+    }
+`
+
+export const HeroH1 = styled.h1`
+    color: #212121;
+    font-size: 48px;
+    text-align: left;
+
+    @media screen and (max-width: 1024px){
+        font-size: 45px;
+    }
+    
+
+    @media screen and (max-width: 768px){
+        font-size: 45px;
+        text-align: center;
+       // align-items: center;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 32px;
+        text-align: center;
+    }
+`
+
+export const HeroP = styled.p`
+    margin-top: 24px;
+    color: #212121;
+    font-size: 24px;
+    text-align: left;
+    max-width: 600px;
+    padding-top: 10px;
+
+    @media screen and (max-width: 1024px){
+        font-size: 22px;
+    }
+
+    @media screen and (max-width: 768px){
+        font-size: 25px;
+        text-align: center;
+        
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 18px;
+    }
+
+`
+
+export const BtnLink = styled(Link)`
+
+border-radius: 50px;
+    background: ${({primary}) => (primary ? '#254D8C' : '#010606')};
+    white-space: nowrap;
+    padding: ${({big}) => (big ? '14px 48px' : '12px 30px')};
+    color: ${({dark}) => (dark ? '#fff':'#010606')};
+    font-size: ${({fontBig}) => (fontBig? '20px':'16px')};
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        background: ${({primary}) => (primary ? '#1B83C2' : '#254D8C')};
+    }
+`
+
+export const HeroBtnWrapper = styled.div`
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+`
+
+export const ArrowForward = styled(MdArrowForward)`
+    margin-left: 8px;
+    font-size: 20px;
+`
+export const ArrowRight = styled(MdKeyboardArrowRight)`
+    margin-left: 8px;
+    font-size: 20px;
+`
+
+
