@@ -16,6 +16,7 @@ const HeroSection = () => {
     <HeroContainer id='home'>
         <HeroBg>
             <ImageBg img src={Image}/> 
+           {/*  <VideoBg autoPlay loop muted src={Video} type='video/mp4' /> */}
         </HeroBg>
         <HeroContent>
             
@@ -23,7 +24,7 @@ const HeroSection = () => {
             <HeroH1>finances with ease,<br />together </HeroH1>
 
             <HeroP>
-                Download the app to easily make payments<br /> and keep track of all your groups' activity<br /> from the convenience of your own phone
+                Download the app to easily make payments<br /> and keep track of all your groups' activity<br /> from the convenience of your own phone.
             </HeroP>
             <HeroBtnWrapper>
                 <BtnLink to='/download' onMouseEnter={onHover} onMouseLeave={onHover} primary="true" dark="true" >

@@ -6,7 +6,7 @@ export const homeObjOne = {
     topLine: 'chama',
     headline: 'All within one app',
     //description: 'Download the Chama app now to get access to our features and start to keep track of your group investments and safely facilitate payments.',
-    description: 'Download the Chama app now, to gain access to our features and easily manage your finances, keep track of group activity, facilitate payments, remain up-to date and much more; all within one app',
+    description: 'Download the Chama app now, to gain access to our features and easily manage your finances, keep track of group activity, facilitate payments, remain up-to date and much more; all within one app.',
     buttonLabel: 'Get started',
     imgStart: true,
     img: require('../../images/about2.png'),

@@ -17,12 +17,13 @@ const Download = () => {
                         <LogoImg2 src={Icon} />
                     </HeroLogoWrapper>
                     <LogoText>
-                        Chama ©
+                        Chama App ©
                     </LogoText>
                     <H1>
                         Available at
                     </H1>
                     <ButtonWrapper>
+                    <a href="https://apps.apple.com/ca/app/chama-app/id1594190242" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'inherit'}}>
                         <Btn>
                             <ButtonImg src={AppleStoreIcon} />
                             <ButtonText>
@@ -34,11 +35,15 @@ const Download = () => {
                                 </Bottom>
                             </ButtonText>
                         </Btn>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.activsync.chama" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'inherit'}}>
+
                         <Btn>
+                            
                             <ButtonImg src={GooglePlayIcon} />
                             <ButtonText>
                                 <Top>
-                                    Android App on
+                                    Get it on
                                 </Top>
                                 <Bottom>
                                     Google Play
@@ -46,6 +51,7 @@ const Download = () => {
                             </ButtonText>
 
                         </Btn>
+                        </a>
                     </ButtonWrapper>
 
 

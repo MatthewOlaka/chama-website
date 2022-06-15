@@ -64,8 +64,15 @@ export const FLink = styled.a`
 `
 
 export const FooterLinkTitle = styled.h1`
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 16px;
+    
+`
+export const FooterLinkEmail = styled.p`
+    font-size: 17px;
+    white-space: nowrap;
+    margin-bottom: 5px;
+    cursor: pointer;
     
 `
 

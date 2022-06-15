@@ -1,6 +1,6 @@
 {
   "name": "chama-website",
-  "homepage": "http://chama-app.com",
+  "homepage": "https://chama-app.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -11,10 +11,6 @@ export const Container = styled.div`
     z-index: 0;
 `
 
-
-
-
-
 export const HeroLogoWrapper = styled.div`
 //display: flex;
     background-color: #254D8C;
@@ -78,6 +74,12 @@ export const H1 = styled.h1`
     font-weight: 400;
 `
 
+/* export const link1 = styled(Link)`
+    text-decoration: none;
+    
+    
+` */
+
 
 export const ButtonWrapper = styled.div`
     //padding: 50px;
@@ -105,7 +107,7 @@ export const Btn = styled.button`
     color: #fff;
     background: #254D8C;
     width: 400px;
-    height: 60px;
+    height: 70px;
     justify-content: center;
     align-items: center;
     border-radius: 40px;
@@ -149,6 +151,10 @@ export const ButtonText = styled.div`
     display: flex;
     flex-direction: column;
 
+`
+
+export const a = styled.a`
+    text-decoration: none;
 `
 
 export const Top = styled.p`
