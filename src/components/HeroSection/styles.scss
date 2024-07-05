@@ -1,0 +1,413 @@
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0; /* Remove any margin that might cause overflow */
+    padding: 0; /* Remove any padding that might cause overflow */
+    width: 100%; /* Ensure the width of the body and html is 100% */
+    box-sizing: border-box; /* Include padding and border in the element's box model */
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes levitate {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes circularMotion {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, 10px);
+    }
+    50% {
+        transform: translate(0, 20px);
+    }
+    75% {
+        transform: translate(-10px, 10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.hero-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%; /* Ensure the wrapper takes the full width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    // overflow: hidden;
+    // background-color: red;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // justify-content: space-between; /* Space between columns */
+    background-color: #27A4DB;
+    position: relative; /* Ensure the container is positioned relative to the wrapper */
+    width: 100%; /* Ensure the container takes the full width of the wrapper */
+    // max-width: 1200px; /* Max width for larger screens */
+    padding: 0 20px; /* Add padding to bring columns closer */
+
+    @media screen and (max-width: 630px){
+        height: 500px;
+    }
+}
+
+.hero-inner-container {
+    display: flex;
+    // flex-direction: row;
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.hero-left-col, .hero-right-col {
+    position: relative; /* Relative positioning for the columns */
+    z-index: 2;
+    width: 80%; /* Ensure the columns are within the container's width */
+}
+
+.hero-left-col {
+    // background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-right-col {
+    // background-color: red;
+    position: relative;
+    width: 100%;
+    height: 600px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-right-col img {
+    position: absolute;
+    transition: all 0.3s ease; /* Smooth transition when resizing */
+    opacity: 0;
+
+    @media screen and (max-width: 630px){
+        display: none;
+    }
+}
+
+.group-img {
+    width: 400px; /* Adjust as needed */
+    height: auto;
+    z-index: 5;
+    animation: slideDown 0.5s ease forwards; /* Slide down animation */
+    animation-delay: 0.2s; /* Delay to start the animation */
+    opacity: 1; /* Ensure visibility */
+
+    @media screen and (max-width: 768px){
+        width: 300px;
+    }
+}
+
+.contribution-img {
+    width: 250px; /* Adjust as needed */
+    height: auto;
+    border-radius: 5px;
+    top: 5%;
+    left: 56%;
+    z-index: 4;
+    animation: slideDown 1s ease forwards, levitate 6s ease-in-out infinite;
+    animation-delay: 0.8s;
+
+    @media screen and (max-width: 768px){
+        top: 15%;
+        width: 150px;
+    }
+}
+
+.total-contribution-img {
+    width: 170px; /* Adjust as needed */
+    height: auto;
+    top: 50%;
+    left: 8%;
+    z-index: 6;
+    border-radius: 10px;
+    animation: slideUp 1s ease forwards, levitate 5s ease-in-out infinite;
+    animation-delay: 0.8s;
+
+    @media screen and (max-width: 768px){
+        left: 0;
+        width: 100px;
+    }
+}
+
+.create-group-img {
+    width: 80px; /* Adjust as needed */
+    height: auto;
+    top: 43%;
+    left: 66%;
+    z-index: 6;
+    border-radius: 15px;
+    animation: slideRight 1s ease forwards, levitate 7s ease-in-out infinite;
+    animation-delay: 0.9s;
+
+    @media screen and (max-width: 768px){
+        left: 80%;
+        width: 60px;
+    }
+}
+
+.join-group-img {
+    width: 80px; /* Adjust as needed */
+    height: auto;
+    top: 13%;
+    left: 20%;
+    z-index: 1;
+    border-radius: 15px;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.8s;
+
+    @media screen and (max-width: 768px){
+        top: 20%;
+        left: 0;
+        width: 60px;
+    }
+}
+
+.total-raised-img {
+    width: 180px; /* Adjust as needed */
+    height: auto;
+    top: 70%;
+    left: 62%;
+    z-index: 0;
+    border-radius: 10px;
+    animation: slideUp 1s ease forwards;
+    animation-delay: 0.8s;
+
+    @media screen and (max-width: 768px){
+        top: 65%;
+        z-index: 6;
+        // left: 0;
+        width: 100px;
+    }
+}
+
+.hero-title{
+    color: #fff;
+    font-family: "Sora";
+    font-weight: 600;
+    font-size: 50px;
+
+    animation: slideRight 0.6s ease forwards; /* Slide down animation */
+    animation-delay: 0.5s; /* Delay to start the animation */
+    opacity: 0; /* Ensure visibility */
+
+    @media screen and (max-width: 1070px){
+        font-size: 40px;
+    }
+    @media screen and (max-width: 768px){
+        font-size: 35px;
+    }
+    @media screen and (max-width: 440px){
+        font-size: 29px;
+    }
+}
+
+.hero-button{
+    display: flex;
+    justify-content: center;
+    width: 400px;
+
+    @media screen and (max-width: 340px){
+        width: 300px;
+    }
+}
+
+.custom-shape-divider-bottom-1719214816 {
+    position: absolute;
+    // bottom: 0;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 0;
+}
+
+.custom-shape-divider-bottom-1719214816 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 600px;
+    transform: rotateY(180deg);
+    background-color: #27A4DB;
+    // z-index: 1;
+}
+
+.custom-shape-divider-bottom-1719214816 .shape-fill {
+    fill: #FFFFFF; /* Change this to your desired color */
+    // fill: #27A4DB;
+}
+
+
+.mid-sec-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0 100px 0;
+    transition: all 0.3s ease;
+
+    @media screen and (max-width: 768px){
+        padding: 150px 0 100px 0;
+    }
+
+}
+
+.iphone-img, .android-img {
+    transition: transform 0.3s ease; /* Smooth transition for the transformation */
+
+    @media screen and (max-width: 630px){
+        display: none;
+    }
+}
+
+.iphone-img {
+    width: 220px;
+    height: auto;
+    margin-right: 20px;
+
+    @media screen and (max-width: 930px){
+        width: 180px;
+        margin-right: 50px;
+    }
+     
+    @media screen and (max-width: 768px){
+        width: 130px;
+        margin-right: 50px;
+    }
+}
+
+.android-img {
+    width: 340px;
+    height: auto;
+
+    @media screen and (max-width: 930px){
+        width: 280px;
+    }
+    @media screen and (max-width: 768px){
+        width: 200px;
+    }
+}
+
+.center-text{
+    // background-color: red;
+    text-align: center;
+    max-width: 500px;
+    padding-right: 50px;
+
+    @media screen and (max-width: 630px){
+        padding: 50px;
+    }
+}
+
+.top-text {
+    font-family: 'Sora';
+    font-size: 25px;
+    font-weight: 600;
+    color: #1A83C2;
+    padding-bottom: 10px;
+
+    @media screen and (max-width: 930px){
+        font-size: 20px;
+    }
+
+    @media screen and (max-width: 768px){
+        font-size: 15px;
+    }
+}
+.mid-text {
+    font-family: 'Sora';
+    font-size: 40px;
+    color: #6A6A6A;
+    padding-bottom: 10px;
+
+    @media screen and (max-width: 930px){
+        font-size: 30px;
+    }
+
+    @media screen and (max-width: 768px){
+        font-size: 25px;
+    }
+}
+
+.bottom-text {
+    font-family: 'Sora';
+    font-size: 20px;
+    color: #6A6A6A;
+
+    @media screen and (max-width: 930px){
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: 768px){
+        font-size: 15px;
+    }
+}

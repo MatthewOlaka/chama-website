@@ -3,6 +3,7 @@ import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md'
 import {Link} from 'react-router-dom'
 
 
+
 export const HeroContainer = styled.div`
     background: #FAFAF2;
     display: flex;
@@ -131,7 +132,28 @@ export const HeroP = styled.p`
 
 export const BtnLink = styled(Link)`
 
-border-radius: 50px;
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    border-radius: 50px;
     background: ${({primary}) => (primary ? '#254D8C' : '#010606')};
     white-space: nowrap;
     padding: ${({big}) => (big ? '14px 48px' : '12px 30px')};
@@ -145,6 +167,11 @@ border-radius: 50px;
     align-items: center;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
+    font-family: "Sora";
+    width: 60%;
+    animation: slideRight 0.5s ease forwards; /* Slide down animation */
+    animation-delay: 0.8s; /* Delay to start the animation */
+    opacity: 0; /* Ensure visibility */
 
     &:hover {
         transition: all 0.2s ease-in-out;

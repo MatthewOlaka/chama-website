@@ -1,5 +1,7 @@
 import React from 'react'
 import { SidebarContainer,Icon, CloseIcon, SidebarWrapper, SidebarMenu, SideBtnWrap, SidebarLink, SidebarRoute } from './SidebarElements'
+import { Link } from 'react-router-dom';
+import "../styles.scss";
 
 const Sidebar = ({isOpen, toggle}) => {
   return (
@@ -13,6 +15,7 @@ const Sidebar = ({isOpen, toggle}) => {
                <SidebarLink to='payments' onClick={toggle} smooth={true} duration={500} spy={true} exact='true' offset={-80}>Payments</SidebarLink>              
                <SidebarLink to='features' onClick={toggle} smooth={true} duration={500} spy={true} exact='true' offset={-80}>Features</SidebarLink>
                <SidebarLink to='platforms' onClick={toggle} smooth={true} duration={500} spy={true} exact='true' offset={-80}>Platforms</SidebarLink>
+               <Link className="contact-us-sidebar" to="/contactus" onClick={toggle} smooth={true} duration={500} spy={true} exact='true' offset={-80}>Contact Us</Link>
                
            </SidebarMenu>
            <SideBtnWrap>

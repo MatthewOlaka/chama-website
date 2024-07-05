@@ -7,7 +7,6 @@ import GooglePlayIcon from '../../images/gplogo.png'
 const Download = () => {
     return (
         <>
-
             <Container>
                 <LogoWrapper to="/">
                     <LogoImg src={Icon} />
@@ -53,11 +52,8 @@ const Download = () => {
                         </Btn>
                         </a>
                     </ButtonWrapper>
-
-
                 </ContentContainer>
             </Container>
-
         </>
     )
 }

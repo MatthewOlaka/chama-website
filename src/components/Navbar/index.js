@@ -4,6 +4,8 @@ import { FaBars } from 'react-icons/fa'
 import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink, NavLogoImg } from './NavbarElements';
 import { animateScroll as scroll } from 'react-scroll/modules';
 import Icon from '../../images/letterc.png'
+import "../styles.scss";
+import { Link } from 'react-router-dom';
 
 const Navbar = ({toggle}) => {
     const [scrollNav, setScrollNav] = useState(false);
@@ -50,9 +52,13 @@ const Navbar = ({toggle}) => {
                             <NavLinks to="platforms" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Platforms</NavLinks>
                         </NavItem>
                     </NavMenu>
-                    <NavBtn>
-                        <NavBtnLink to="/download" >Download</NavBtnLink>
-                    </NavBtn>
+                    <div className='nav-buttons'>
+                        <Link className="contact-us" to="/contactus">Contact Us</Link>
+                        <NavBtn>
+                            <NavBtnLink to="/download" >Download</NavBtnLink>
+                        </NavBtn>
+                    </div>
+                    
                 </NavbarContainer>
             </Nav>
             </IconContext.Provider>
