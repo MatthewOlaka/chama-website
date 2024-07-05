@@ -37,14 +37,23 @@ export const HeroBg = styled.div`
     }
 `
 
-export const VideoBg = styled.video`
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    background: #232a34;
-    justify-content: center;
-`
+// export const VideoBg = styled.video`
+//     width: 100%;
+//     height: 100%;
+//     -o-object-fit: cover;
+//     object-fit: cover;
+//     background: #232a34;
+//     justify-content: center;
+// `
+
+// export const VideoBg = styled.video`
+//     width: 100%;
+//     height: 100%;
+//     -o-object-fit: cover;
+//     object-fit: cover;
+//     background: transparent;
+//     background-color: rgba(0, 0, 0, 0.5);
+// `;
 
 export const ImageBg = styled.img`
     width: 100%;
