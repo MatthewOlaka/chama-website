@@ -74,7 +74,7 @@ const HeroSection = () => {
                     <p className='bottom-text'>
                         Our app provides a solution for managing Chamas, making it easier to collaborate and grow together.
                         Connect with members across the globe, track contributions, and monitor the overall performance of your group.
-                        Stay organized and make informed decisions with our intuitive platform designed specifically for Investment groups.
+                        Stay organized and make informed decisions with our intuitive platform designed specifically for investment groups.
                     </p>
                 </div>
                 <img className='iphone-img' src={IphoneImg} alt='Image7'></img>
