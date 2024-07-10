@@ -67,7 +67,7 @@ export const FeaturesH1 = styled.h1`
     font-size: 2.5rem;
     color: #fff;
     margin-bottom: 64px;
-    /* font-family: 'Sora'; */
+    font-family: 'Sora';
 
     @media screen and (max-width: 480) {
         font-size: 2rem;
@@ -77,11 +77,11 @@ export const FeaturesH1 = styled.h1`
 export const FeaturesH2 = styled.h2`
     font-size: 1rem;
     margin-bottom: 10px;
-    /* font-family: 'Sora'; */
+    font-family: 'Sora';
 `
 
 export const FeaturesP = styled.p`
     font-size: 1em;
     text-align: center;
-    /* font-family: 'Sora'; */
+    font-family: 'Sora';
 `

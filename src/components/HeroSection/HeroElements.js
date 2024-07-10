@@ -90,7 +90,7 @@ export const HeroH1 = styled.h1`
     font-size: 50px;
     text-align: left;
     font-weight: bold;
-   /*  font-family: 'Sora'; */
+    font-family: 'Sora';
 
   /*  color: white;
   -webkit-text-fill-color: #254D8D; 
@@ -121,7 +121,7 @@ export const HeroP = styled.p`
     text-align: left;
     max-width: 600px;
     padding-top: 10px;
-    /* font-family: 'Sora'; */
+    font-family: 'Sora';
 
     @media screen and (max-width: 1024px){
         font-size: 22px;
